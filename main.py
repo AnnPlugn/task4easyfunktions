@@ -1,3 +1,4 @@
+#TASK3
 def stroki(strok, isk_sim):
     arr_sim = [str(sim) for sim in strok]
     if isk_sim in arr_sim:
@@ -41,3 +42,44 @@ def dicts():
 
 #test3
 #print(dicts())
+
+#TASK4
+def lists(keys, values):
+    if len(keys) == len(values):
+        list = {keys: values for keys, values in zip(keys, values)}
+    else:
+        return False
+    return list
+
+#print("Длина списков одинакова")
+#keys = (list(map(int,input().split("Через пробел введите список ключей"))))
+#values = (list(map(int,input().split("Через пробел введите список значений"))))
+#print(list(keys,values))
+
+#TASK5
+def lists2(listA, listB):
+    listA.append(input("Выберите какой элемент хотите добавить"))
+    listA.extend(listB)
+    return reversed(listA)
+
+#listA = (list(map(str,input().split("Через пробел введите список А"))))
+#listB = (list(map(str,input().split("Через пробел введите список B"))))
+#print(list2(listA, listB))
+
+
+#TASK6
+def lists3():
+    my_list = []
+    for i in range(120):
+        my_list.append(i)
+
+    length = len(my_list)
+
+    total_sum = sum(my_list)
+
+    avg = total_sum / length
+
+    Res = {"Длина списка": length,"Сумма всех элементов:": total_sum,"Среднее арифметическое:": avg}
+    return Res
+
+#print(lists3())
